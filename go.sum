@@ -4,6 +4,8 @@ github.com/Nekhaevalex/fwsprotocol v0.0.4 h1:9CRBsbUuSVkEsLvXZ84tiM0dvZafds+D6Zs
 github.com/Nekhaevalex/fwsprotocol v0.0.4/go.mod h1:XZgWESwgz/oFO8CLxL8Deu3SXtoR9+lzxXSdai1uj04=
 github.com/Nekhaevalex/queue v0.0.0-20230903204443-49f416cff44e h1:82eRCnb0fLCQVMwFBVEI2mio4ZG7iFMc6z6RBd86Hfg=
 github.com/Nekhaevalex/queue v0.0.0-20230903204443-49f416cff44e/go.mod h1:u/B6tVpsc08WNARZ2soIMNKmCLA6beoeY1xgCE7t9xw=
+github.com/Nekhaevalex/queue v1.0.0 h1:xMIVWCxpEg2peqRdvlQ+WHnOFSGpkZsMY+wkE11z8XA=
+github.com/Nekhaevalex/queue v1.0.0/go.mod h1:u/B6tVpsc08WNARZ2soIMNKmCLA6beoeY1xgCE7t9xw=
 github.com/mattn/go-runewidth v0.0.9/go.mod h1:H031xJmbD/WCDINGzjvQ9THkh0rPKHF+m2gUSrubnMI=
 github.com/mattn/go-runewidth v0.0.15 h1:UNAjwbU9l54TA3KzvqLGxwWjHmMgBUVhBiTjelZgg3U=
 github.com/mattn/go-runewidth v0.0.15/go.mod h1:Jdepj2loyihRzMpdS35Xk/zdY8IAYHsh153qUoGf23w=
