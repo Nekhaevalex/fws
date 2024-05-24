@@ -36,12 +36,12 @@ func (handler *AppHandler) handleHelper(replies *queue.ChannelQueue[proto.Reques
 			}
 			_, err := handler.conn.Write(new_reply.Encode())
 			if err != nil {
-				log.Fatal(err)
+				handler.app_quit <- 1
 			}
 		case new_event := <-events.Dequeue():
 			_, err := handler.conn.Write(new_event.Encode())
 			if err != nil {
-				log.Fatal(err)
+				handler.app_quit <- 1
 			}
 		}
 	}
@@ -98,7 +98,7 @@ func (handler *AppHandler) requestReciever() {
 					handler.app_quit <- 1
 					return
 				default:
-					log.Fatal(err)
+					log.Fatal("handler app request read error", err)
 				}
 			}
 			buff = append(buff, partial_buff[:n]...)
@@ -124,7 +124,7 @@ func (handler *AppHandler) notifyApp() {
 	msg := []byte("READY")
 	_, err := handler.conn.Write(msg)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("failed to notify app", err)
 	}
 }
 

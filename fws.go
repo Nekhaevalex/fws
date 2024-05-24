@@ -37,7 +37,7 @@ func main() {
 
 func accepter(screen *Screen) {
 	if err := os.RemoveAll(proto.FWS_SOCKET); err != nil {
-		log.Fatal(err)
+		log.Fatal("socket path error", err)
 	}
 	l, err := net.Listen("unix", proto.FWS_SOCKET)
 	if err != nil {
@@ -74,7 +74,7 @@ func accepter(screen *Screen) {
 func initTermbox() {
 	err := termbox.Init()
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("termbox initialization error", err)
 	}
 	termbox.SetOutputMode(termbox.OutputRGB)
 	termbox.SetInputMode(termbox.InputEsc | termbox.InputMouse)
